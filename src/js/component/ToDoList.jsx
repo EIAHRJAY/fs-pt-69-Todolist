@@ -8,6 +8,7 @@ const TodoApp = () => {
   return(
     <div className="container">
       <h1>Todos </h1>
+      <div>
       <ul>
         <li ><input
          type="text" 
@@ -22,7 +23,7 @@ const TodoApp = () => {
         }}
           placeholder="What do you need to do ?"></input></li>
         {todos.map((item,index) => (
-          <li>{item}<button onClick={() => 
+          <li>{item}<button className="hover-button" onClick={() => 
             setTodos(
               todos.filter(
                 (t, currentIndex) => 
@@ -34,7 +35,9 @@ const TodoApp = () => {
         ))}  
          
       </ul>
-      <div>{todos.length} takes</div>
+    </div>
+      <div className="take">{todos.length} takes</div>
+   
     </div>
   );
 };
