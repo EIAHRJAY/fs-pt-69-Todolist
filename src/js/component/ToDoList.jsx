@@ -15,7 +15,7 @@ const TodoApp = () => {
          onChange={(e) => setInputValue(e.target.value)}
          value={inputValue}
          onKeyPress={(e) =>{
-          if(e.key === "Enter") {
+          if(e.key === "Enter" && inputValue.trim() != "") {
             setTodos(todos.concat([inputValue]));
             setInputValue("");
           }
