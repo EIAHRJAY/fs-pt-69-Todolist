@@ -23,7 +23,7 @@ const TodoApp = () => {
         }}
           placeholder="What do you need to do ?"></input></li>
         {todos.map((item,index) => (
-          <li>{item}<button className="hover-button" onClick={() => 
+          <li key={index}>{item}<button className="hover-button" onClick={() => 
             setTodos(
               todos.filter(
                 (t, currentIndex) => 
